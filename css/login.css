@@ -1,0 +1,80 @@
+@font-face {
+  font-family: PoppinsBold;
+  src: url('../assets/fonts/Poppins-Bold.otf');
+}
+
+@font-face {
+  font-family: PoppinsSemiBold;
+  src: url('../assets/fonts/Poppins-SemiBold.otf');
+}
+
+@font-face {
+  font-family: PoppinsRegular;
+  src: url('../assets/fonts/Poppins-Regular.otf');
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-container {
+  height: 400px;
+  width: 400px;
+  border-radius: 34px;
+  -webkit-box-shadow: 0 0 20px rgba(255, 170, 59, 1);
+  box-shadow: 0 0 20px rgba(255, 170, 59, 1);
+  border: 2px solid rgb(255, 170, 59);
+  text-align: center;
+}
+
+.login-container h1 {
+  color: rgba(255, 170, 59, 1);
+  font-family: PoppinsBold;
+  font-size: 28px;
+}
+
+.inputs {
+  height: 40px;
+  width: 300px;
+  border: 0.5px solid rgb(255, 170, 59);
+  border-radius: 9px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.inputs::placeholder {
+  font-family: PoppinsSemiBold;
+}
+
+.username {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.btn-1 {
+  font-family: PoppinsSemiBold;
+  text-transform: capitalize;
+  color: white;
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 132, 0, 1);
+  border: none;
+  -webkit-box-shadow: 0 0 10px rgba(255, 170, 59, 1);
+  box-shadow: 0 0 10px rgba(255, 170, 59, 1);
+  margin-top: 30px;
+}
+
+.already {
+  font-family: PoppinsRegular;
+  color: rgba(255, 170, 59, 1);
+  margin-top: 20px;
+}
+
+.already a {
+  text-decoration: underline;
+  color: rgba(255, 170, 59, 1);
+}
