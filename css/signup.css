@@ -13,11 +13,21 @@
   src: url('../assets/fonts/Poppins-Regular.otf');
 }
 
+/* Navbar overrides */
+nav {
+  background-color: rgba(255, 132, 0, 1);
+}
+
 body {
+  margin: 0;
+}
+
+#login {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  margin-top: -80px;
 }
 
 .login-container {

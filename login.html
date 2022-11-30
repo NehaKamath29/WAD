@@ -1,28 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <title>Login</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/css/login.css" />
-  <title>Login</title>
-</head>
+  <body>
+    <!-- -------------------------------------------------------- NAVIGATION ----------------------------------------------- -->
+    <nav class="navigation">
+      <ul>
+        HotelManager
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="./login.html">Login</a></li>
+        <li><a href="./signup.html">Signup</a></li>
+        <li><a href="./hotels.html">Hotels</a></li>
+      </ul>
+    </nav>
 
-<body>
-  <div class="login-container">
-    <h1>Login to your account</h1>
-    <div id="name">
-    <input type="text" id="username" class="inputs username" placeholder="Username" />
-    <div class="formerror"> </div></div>
-    <div id="password1">
-    <input type="password" id="password" class="inputs password" placeholder="Password" /><br />
-    <div class="formerror"> </div></div>
-    <button class="btn-1" onclick="check()">sign in</button>
+    <section id="login">
+      <div class="login-container">
+        <h1>Login to your account</h1>
+        <div id="name">
+          <input
+            type="text"
+            id="username"
+            class="inputs username"
+            placeholder="Username"
+          />
+          <div class="formerror"></div>
+        </div>
+        <div id="password1">
+          <input
+            type="password"
+            id="password"
+            class="inputs password"
+            placeholder="Password"
+          /><br />
+          <div class="formerror"></div>
+        </div>
+        <button class="btn-1" onclick="check()">sign in</button>
 
-    <div class="already">New here? <a href="./signup.html">Signup</a></div>
-  </div>
-  <script src="login.js"></script>
-</body>
-
+        <div class="already">New here? <a href="./signup.html">Signup</a></div>
+      </div>
+    </section>
+    <script src="./js/login.js"></script>
+  </body>
 </html>
