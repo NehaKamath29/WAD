@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/signup.css" />
-    <title>Signup</title>
-  </head>
-  <body>
-    <div class="login-container">
-      <h1>Create an account</h1>
-      <input type="text" class="inputs username" placeholder="Username" />
-      <input type="text" class="inputs name" placeholder="Full Name" />
-      <input
-        type="text"
-        class="inputs number"
-        placeholder="Phone Number (+91)"
-      />
-      <input
-        type="password"
-        class="inputs password"
-        placeholder="Password"
-      /><br />
-      <button class="btn-1">sign in</button>
-      <div class="already">
-        Already have an account? <a href="./login.html">Login</a>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./signup.css" />
+  <title>Signup</title>
+</head>
+
+<body>
+  <div class="login-container">
+    <h1>Create an account</h1>
+    <!-- <form aciton ="hotels.html" name="myForm" onsubmit="return check()" method="post"> -->
+    <div id="name">
+      <input type="text" id="username" class="inputs username" placeholder="Username" />
+      <div class="formerror"> </div>
     </div>
-  </body>
+    <div id="email1">
+      <input type="email" id="email" class="inputs name" placeholder="Email" />
+      <div class="formerror"> </div>
+    </div>
+    <div id="ph1">
+      <input type="number" id="ph" class="inputs number" placeholder="Phone Number (+91)" />
+      <div class="formerror"> </div>
+    </div>
+    <div id="password1">
+      <input type="password" id="password" class="inputs password" placeholder="Password" /><br />
+      <div class="formerror"> </div>
+    </div>
+    <input type="submit" value="Sign In" onclick="check()">
+    <!-- </form> -->
+    <div class="already">
+      Already have an account? <a href="./login.html">Login</a>
+    </div>
+  </div>
+  <script src="signup.js"></script>
+</body>
+
 </html>
