@@ -16,6 +16,7 @@
 body {
   margin: 0;
   padding-top: 0px;
+  padding-bottom: 20px;
 }
 
 /* code for slide show  starts*/
@@ -137,6 +138,23 @@ nav {
   font-family: PoppinsSemiBold;
   color: rgba(255, 170, 59, 1);
   text-transform: capitalize;
+}
+
+.book-button {
+  width: 100%;
+  text-align: center;
+}
+
+.book-button button {
+  font-family: PoppinsMedium;
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 100px;
+  background-color: rgba(255, 132, 0, 1);
+  border: none;
+  box-shadow: 6px 6px 10px rgba(255, 170, 59, 1);
+  color: white;
 }
 
 @keyframes fade {
