@@ -1,0 +1,133 @@
+@font-face {
+    font-family: PoppinsBlack;
+    src: url('../assets/fonts/Poppins-Black.otf');
+  }
+  @font-face {
+    font-family: PoppinsBold;
+    src: url('../assets/fonts/Poppins-Bold.otf');
+  }
+  @font-face {
+    font-family: PoppinsMedium;
+    src: url('../assets/fonts/Poppins-Medium.otf');
+  }
+  @font-face {
+    font-family: PoppinsRegular;
+    src: url('../assets/fonts/Poppins-Regular.otf');
+  }
+  
+  nav {
+    background-color: rgba(255, 132, 0, 1);
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  #hotels {
+  }
+  
+  .hotels-header {
+    padding-left: 60px;
+    padding-top: 60px;
+    font-family: PoppinsBold;
+    font-size: 35px;
+  }
+  
+  .hotels-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hotel {
+    height: 200px;
+  
+    width: 80vw;
+    /*border: 1px solid rgba(255, 132, 0, 1);*/
+    box-shadow:rgb(211, 210, 210) 5px 5px 5px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .hotel-name img{
+    font-family: PoppinsMedium;
+    font-size: 2em;
+    margin-right: 21vw;
+    height:180px;
+    width:210px;
+    border-radius: 5%;
+  }
+  .hotel-name span
+  {
+    position:relative;
+    left:10%;
+    font-family: PoppinsBold;
+    font-size: 35px;
+    
+  }
+
+  /*.hotel-image
+  {
+    
+
+  }*/
+
+  
+  .hotel-info {
+    position: relative;
+    height: 100%;
+    min-width: 300px;
+  }
+  
+  .info {
+    position: absolute;
+  }
+  
+  .info1 {
+    top: 0;
+  }
+  .info2 {
+    top: 0;
+    right: 0;
+  }
+  
+  .info3 {
+    bottom: 0;
+    left: 0;
+  }
+  .info4 {
+    bottom: 0;
+    right: 0;
+  }
+  
+  .info-title {
+    color: rgb(92, 90, 90);
+    font-family: PoppinsMedium;
+    font-size:120%;
+
+  }
+  
+  .info-value {
+    font-family: PoppinsRegular;
+    color:rgb(7, 0, 0)
+  }
+  
+  .book-hotel {
+    margin-left: 18vw;
+  }
+  
+  .book-hotel button {
+    font-family: PoppinsMedium;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 100px;
+    background-color: rgba(255, 132, 0, 1);
+    border: none;
+    box-shadow: 6px 6px 10px rgba(255, 170, 59, 1);
+  }
+  
