@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/navbar.css" />
     <link rel="stylesheet" href="/css/hotels.css" />
+    <link rel="stylesheet" href="./css/search.css"/>
     <title>View hotels</title>
   </head>
   <body>
@@ -21,11 +22,21 @@
     </nav>
 
     <section id="hotels">
-      <h1 class="hotels-header">List Of Hotels</h1>
+      <!--<h1 class="hotels-header">List Of Hotels</h1>-->
+      <div class="hotels-header">
+        <form autocomplete="off">
+          <div>
+            <input type="text" id="input" placeholder="Search hotel"/>
+          </div>
+          <ul class="list"></ul>
+        </form>
+      </div>
+
       <div class="hotels-container">
         <div class="hotel">
           <div class="hotel-name">
             <img class="hotel-image" src="./assets/img/hotel1_image.jpeg" />
+
             <span>Hotel1</span>
           </div>
 
@@ -49,12 +60,15 @@
           </div>
 
           <div class="book-hotel">
-            <button class="book">Book Now</button>
+            <button class="book">
+              <a href="./hotel_desc.html">Book Now</a>
+            </button>
           </div>
         </div>
         <div class="hotel">
           <div class="hotel-name">
             <img class="hotel-image" src="./assets/img/hotel2_image.jpeg" />
+
             <span>Hotel2</span>
           </div>
 
@@ -79,7 +93,9 @@
           </div>
 
           <div class="book-hotel">
-            <button class="book">Book Now</button>
+            <button class="book">
+              <a href="./hotel_desc.html">Book Now</a>
+            </button>
           </div>
         </div>
         <div class="hotel">
@@ -109,10 +125,13 @@
           </div>
 
           <div class="book-hotel">
-            <button class="book">Book Now</button>
+            <button class="book">
+              <a href="./hotel_desc.html">Book Now</a>
+            </button>
           </div>
         </div>
       </div>
     </section>
+    <script src="./js/search.js"></script>
   </body>
 </html>
