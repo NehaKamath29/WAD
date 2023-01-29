@@ -1,0 +1,60 @@
+@font-face {
+  font-family: PoppinsBold;
+  src: url('../assets/fonts/Poppins-Bold.otf');
+}
+
+@font-face {
+  font-family: PoppinsRegular;
+  src: url('../assets/fonts/Poppins-Regular.otf');
+}
+@font-face {
+  font-family: PoppinsSemiBold;
+  src: url('../assets/fonts/Poppins-SemiBold.otf');
+}
+
+/* Navbar overrides */
+nav {
+  background-color: rgba(255, 132, 0, 1);
+}
+
+body {
+  margin: 0;
+}
+
+#profile {
+  padding: 100px;
+}
+
+.user-details,
+.hotels-booked {
+  padding: 20px 50px 20px 50px;
+  border: 1px solid rgba(255, 132, 0, 1);
+}
+
+.hotels-booked {
+  margin-top: 40px;
+}
+
+.section-header {
+  font-family: PoppinsBold;
+  color: rgba(255, 132, 0, 1);
+}
+
+.details {
+  font-family: PoppinsRegular;
+}
+
+.details .detail-name {
+  font-family: PoppinsSemiBold;
+  color: rgb(88, 88, 88);
+}
+
+.hotels {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-name {
+  font-family: PoppinsSemiBold;
+  margin-top: 9px;
+}

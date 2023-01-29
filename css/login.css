@@ -13,7 +13,16 @@
   src: url('../assets/fonts/Poppins-Regular.otf');
 }
 
+/* Navbar overrides */
+nav {
+  background-color: rgba(255, 132, 0, 1);
+}
+
 body {
+  margin: 0;
+}
+
+#login {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,4 +86,10 @@ body {
 .already a {
   text-decoration: underline;
   color: rgba(255, 170, 59, 1);
+}
+
+.formerror {
+  font-family: PoppinsRegular;
+  text-transform: capitalize;
+  color: rgb(206, 0, 0);
 }
