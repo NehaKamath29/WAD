@@ -4,23 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/css/hotel_desc.css" />
     <link rel="stylesheet" href="/css/navbar.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
-  <body>
-    <!-- -------------------------------------------------------- NAVIGATION ----------------------------------------------- -->
-    <nav class="navigation">
-      <ul>
-        HotelManager
-        <li><a class="" href="/">Home</a></li>
-        <li><a href="./login.html">Login</a></li>
-        <li><a href="./signup.html">Signup</a></li>
-        <li><a href="./hotels.html">Hotels</a></li>
-      </ul>
-    </nav>
   <body>
     <!-- -------------------------------------------------------- NAVIGATION ----------------------------------------------- -->
     <nav class="navigation">
@@ -42,24 +28,7 @@
           />
           <div class="text">Room1</div>
         </div>
-      <div class="slideshow-container" style="margin-top: 20px">
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img
-            src="https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=600"
-            style="width: 100%"
-          />
-          <div class="text">Room1</div>
-        </div>
 
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img
-            src="https://images.pexels.com/photos/460537/pexels-photo-460537.jpeg?auto=compress&cs=tinysrgb&w=600"
-            style="width: 100%"
-          />
-          <div class="text">Room2</div>
-        </div>
         <div class="mySlides fade">
           <div class="numbertext">2 / 3</div>
           <img
@@ -77,17 +46,7 @@
           />
           <div class="text">Room3</div>
         </div>
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img
-            src="https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&w=600"
-            style="width: 100%"
-          />
-          <div class="text">Room3</div>
-        </div>
 
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
 
@@ -100,26 +59,17 @@
       <br />
       <div id="info" style="margin-top: 20px">
         <h1 class="info-header">Hotel1 Property highlights</h1>
-        <<<<<<< HEAD
-
+        
         <p class="info-highlight">
           Top location: Highly rated by recent guests (8.3)
         </p>
-        =======
-
-        <p class="info-highlight">
-          Top location: Highly rated by recent guests (8.3)
-        </p>
-        <div>
-          <h4>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-          </h4>
-        </div>
-        >>>>>>> 71a47374ebfe438c2a28dd52493d41610a7d59fc
+        <div><h4>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+      </h4></div>
         <p>
           <span class="info-highlight"> Breakfast info: </span>
           <br />
@@ -150,36 +100,11 @@
       function plusSlides(n) {
         showSlides((slideIndex += n));
       }
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
 
       function currentSlide(n) {
         showSlides((slideIndex = n));
       }
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
 
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName('mySlides');
-        let dots = document.getElementsByClassName('dot');
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = 'none';
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(' active', '');
-        }
-        slides[slideIndex - 1].style.display = 'block';
-        dots[slideIndex - 1].className += ' active';
-      }
       function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName('mySlides');
@@ -201,6 +126,4 @@
       }
     </script>
   </body>
-  </body>
 </html>
-
