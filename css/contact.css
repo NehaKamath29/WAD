@@ -1,0 +1,81 @@
+@font-face {
+  font-family: PoppinsSemiBold;
+  src: url('../assets/fonts/Poppins-SemiBold.otf');
+}
+
+@font-face {
+  font-family: PoppinsBold;
+  src: url('../assets/fonts/Poppins-Bold.otf');
+}
+
+@font-face {
+  font-family: PoppinsRegular;
+  src: url('../assets/fonts/Poppins-Regular.otf');
+}
+
+.contact-section {
+  z-index: 50;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: whitesmoke;
+  opacity: 0.96;
+  margin-top: -35px;
+  margin-left: -40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 0;
+  transition: 0.5s;
+  transition-property: width;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+}
+
+.contact-field {
+  margin-bottom: 20px;
+  height: 40px;
+  width: 300px;
+  border: 0.5px solid rgb(255, 170, 59);
+  border-radius: 9px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contact-field::placeholder {
+  font-family: PoppinsSemiBold;
+}
+
+.contact-form button {
+  font-family: PoppinsSemiBold;
+  text-transform: capitalize;
+  color: white;
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 132, 0, 1);
+  border: none;
+  -webkit-box-shadow: 0 0 10px rgba(255, 170, 59, 1);
+  box-shadow: 0 0 10px rgba(255, 170, 59, 1);
+  margin-top: 30px;
+}
+
+#contact-header {
+  font-family: PoppinsBold;
+  text-transform: capitalize;
+  font-size: 2.1em;
+  color: rgba(255, 170, 59, 1);
+  visibility: hidden;
+}
+
+.contact-section p {
+  font-family: PoppinsRegular;
+  color: rgba(255, 170, 59, 1);
+  text-decoration: underline;
+  visibility: hidden;
+}
