@@ -59,6 +59,10 @@ body {
   margin-right: 21vw;
 }
 
+.breakline {
+  visibility: hidden;
+}
+
 .hotel-image {
   width: 100%;
   height: 100%;
@@ -135,10 +139,19 @@ body {
     height: 100px;
   }
 
+  .breakline {
+    visibility: initial;
+  }
+
   .hotel-name {
     margin: initial;
     margin-bottom: 40px;
   }
+  /* 
+  .hotel-name span {
+    margin-right: -20px;
+  } */
+
   .book-hotel {
     margin-left: initial;
     margin-top: 40px;
