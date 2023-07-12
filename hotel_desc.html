@@ -67,7 +67,7 @@
     </div>
     <br />
     <div id="info" style="margin-top: 20px">
-      <h1 class="info-header">Radisson Blu Property highlights</h1>
+      <h1 class="info-header"></h1>
 
       <p class="info-highlight">
         Top location: Highly rated by recent guests (8.3)
@@ -99,8 +99,11 @@
         There are more repeat guests here than most other properties.
       </p>
     </div>
+    <div class="login-request">
+      <p class="login-request-text">Please Login To Book This Hotel</p>
+    </div>
     <div class="book-button">
-      <button onclick="alert('Hotel Booked')">Book Now</button>
+      <button onclick="bookHotel()">Book Now</button>
     </div>
   </div>
 
@@ -138,12 +141,49 @@
   </script>
 
   <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const hotelId = urlParams.get('id');
+    const url = 'http://localhost:3000/';
     const token = localStorage.getItem("token");
-    if (token) {
-      document.getElementById('login-nav').style.display = 'none';
-      document.getElementById('signup-nav').style.display = 'none';
-      document.getElementById('logged-in').style.display = 'block';
+
+    (async function () {
+      if (!token) {
+        document.getElementsByClassName('login-request-text')[0].style.display = 'initial';
+        document.getElementsByClassName('book-button')[0].style.display = 'none';
+      }
+      if (token) {
+        document.getElementsByClassName('login-request-text')[0].style.display = 'none';
+        document.getElementsByClassName('book-button')[0].style.display = 'block';
+        document.getElementById('login-nav').style.display = 'none';
+        document.getElementById('signup-nav').style.display = 'none';
+        document.getElementById('logged-in').style.display = 'block';
+      }
+
+      const res = await fetch(url + 'hotel/' + hotelId);
+      const hotel = await res.json();
+      console.log(hotel);
+
+      document.getElementsByClassName('info-header')[0].innerHTML = `${hotel.hotel_name} Property Highlights`;
+    })();
+
+    async function bookHotel() {
+      const response = await fetch(url + 'createBooking', {
+        method: 'POST',
+        body: JSON.stringify({ hotelId }),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + token
+        }
+      });
+      const res = await response.json();
+      console.log(res);
+      if (res.message) {
+        alert('Successfully booked');
+      } else {
+        alert('Something went wrong!');
+      }
     }
+  </script>
   </script>
 </body>
 

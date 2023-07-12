@@ -27,7 +27,6 @@ mongoose.connect('mongodb+srv://root:1234@cluster0.k2f5vsu.mongodb.net/HotelMana
 app.get('/hotels', async (req, res) => {
   try {
     const hotels = await Hotel.find();
-    console.log(hotels[0]._id.toString());
     res.send(hotels);
   } catch (error) {
     console.error('Error retrieving hotels:', error);
@@ -52,8 +51,8 @@ app.get('/hotel/:id', async (req, res) => {
 // Dummy route to create hotels
 app.post('/createHotel', async (req, res) => {
   const hotel = new Hotel({
-    hotel_name: 'Hotel Transylvania',
-    hotel_adress: 'Near Transylvania',
+    hotel_name: 'Mariott',
+    hotel_adress: 'USA',
 
   });
 

@@ -145,6 +145,12 @@ nav {
   text-align: center;
 }
 
+.login-request {
+  font-size: 23px;
+  width: 100%;
+  text-align: center;
+}
+
 .book-button button {
   font-family: PoppinsMedium;
   font-size: 1em;

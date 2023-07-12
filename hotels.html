@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css/hotels.css" />
   <link rel="stylesheet" href="./css/contact.css" />
   <script src="./js/contact-form.js"></script>
+  <script src="./js/jquery.min.js"></script>
   <title>View hotels</title>
 </head>
 
@@ -38,13 +39,37 @@
 
   <section id="hotels">
 
-    <div class="hotels-container">
+    <div class="hotels-container" id="hotels-container">
       <h1 id="welcome-header"></h1>
-      <div class="hotel">
+      <!-- Dynamically rendered -->
+    </div>
+  </section>
+  <!-- <script src="./js/search.js"></script> -->
+</body>
+<script>
+  const token = localStorage.getItem("token");
+  const username = localStorage.getItem("username");
+  if (token) {
+    document.getElementById('login-nav').style.display = 'none';
+    document.getElementById('signup-nav').style.display = 'none';
+    document.getElementById('logged-in').style.display = 'block';
+
+    document.getElementById('welcome-header').innerHTML = 'Welcome, ' + username + '!';
+  }
+</script>
+
+<script>
+  (async function () {
+    const response = await fetch('http://localhost:3000/hotels');
+    const hotels = await response.json();
+    for (var key in hotels) {
+      $('#hotels-container').append(
+        `
+        <div class="hotel">
         <div class="hotel-name">
-          <img class="hotel-image" src="./assets/img/hotel1_image.jpeg" />
+          <img class="hotel-image" src="./assets/img/${hotels[key].hotel_name}.jpeg" />
           <br class="breakline" />
-          <span>Radisson Blu</span>
+          <span>${hotels[key].hotel_name}</span>
         </div>
 
         <div class="hotel-info">
@@ -68,90 +93,14 @@
 
         <div class="book-hotel">
           <button class="book">
-            <a href="./hotel_desc.html">Book Now</a>
+            <a href="./hotel_desc.html?id=${hotels[key]._id}">Book Now</a>
           </button>
         </div>
       </div>
-      <div class="hotel">
-        <div class="hotel-name">
-          <img class="hotel-image" src="./assets/img/hotel2_image.jpeg" />
-          <br class="breakline" />
-          <span>Shangri La</span>
-        </div>
-
-        <div class="hotel-info">
-          <div class="info info1">
-            <div class="info-title">No. of rooms</div>
-            <div class="info-value">300</div>
-          </div>
-          <div class="info info2">
-            <div class="info-title">No. of available rooms</div>
-            <div class="info-value">100</div>
-          </div>
-          <div class="info info3">
-            <div class="info-title">Price per night</div>
-            <div class="info-value">2000Rs</div>
-          </div>
-          <div class="info info4">
-            <div class="info-title">Pets allowed</div>
-
-            <div class="info-value">No</div>
-          </div>
-        </div>
-
-        <div class="book-hotel">
-          <button class="book">
-            <a href="./hotel_desc.html">Book Now</a>
-          </button>
-        </div>
-      </div>
-      <div class="hotel">
-        <div class="hotel-name">
-          <img class="hotel-image" src="./assets/img/hotel3_image.jpeg" />
-          <br class="breakline" />
-          <span>Mariott</span>
-        </div>
-
-        <div class="hotel-info">
-          <div class="info info1">
-            <div class="info-title">No. of rooms</div>
-            <div class="info-value">200</div>
-          </div>
-          <div class="info info2">
-            <div class="info-title">No. of available rooms</div>
-
-            <div class="info-value">100</div>
-          </div>
-          <div class="info info3">
-            <div class="info-title">Price per night</div>
-            <div class="info-value">1600Rs</div>
-          </div>
-          <div class="info info4">
-            <div class="info-title">Pets allowed</div>
-            <div class="info-value">Yes</div>
-          </div>
-        </div>
-
-        <div class="book-hotel">
-          <button class="book">
-            <a href="./hotel_desc.html">Book Now</a>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- <script src="./js/search.js"></script> -->
-</body>
-<script>
-  const token = localStorage.getItem("token");
-  const username = localStorage.getItem("username");
-  if (token) {
-    document.getElementById('login-nav').style.display = 'none';
-    document.getElementById('signup-nav').style.display = 'none';
-    document.getElementById('logged-in').style.display = 'block';
-
-    document.getElementById('welcome-header').innerHTML = 'Welcome, ' + username + '!';
-  }
+        `
+      )
+    }
+  })();
 </script>
 
 </html>
