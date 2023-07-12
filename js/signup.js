@@ -1,4 +1,26 @@
-function check() {
+const url = 'http://localhost:3000/signup';
+
+async function submitSignupForm(password, username, phone, email) {
+  const response = await fetch(url, {
+    method: 'POST',
+    body: JSON.stringify({username, password, phone, email}),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+  const res = await response.json();
+  const token = res.token;
+  if (!token) {
+    alert('Username/Email/Phone number exists');
+    return;
+  }
+  console.log(res);
+  localStorage.setItem("token", token);
+  localStorage.setItem("username", username);
+  window.location = 'hotels.html';
+};
+
+async function check() {
   password = document.getElementById('password').value;
   char1 = password.charAt(0);
   let pattern = /\d/g;
@@ -72,6 +94,12 @@ function check() {
   }
 
   if (returnval == true) {
+    await submitSignupForm(
+      password,
+      document.getElementById('username').value,
+      document.getElementById('ph').value,
+      document.getElementById('email').value
+    );
     window.location = 'hotels.html';
   }
 }

@@ -11,6 +11,10 @@
   src: url('../assets/fonts/Poppins-Medium.otf');
 }
 
+#logged-in {
+  display: none;
+}
+
 .navigation ul {
   list-style-type: none;
   margin: 0;

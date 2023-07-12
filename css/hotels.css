@@ -27,6 +27,11 @@ body {
   margin-top: 40px;
 }
 
+.welcome-header {
+  font-family: PoppinsBold;
+  font-size: 35px;
+}
+
 .hotels-header {
   padding-left: 60px;
   padding-top: 60px;

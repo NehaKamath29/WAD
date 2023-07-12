@@ -1,160 +1,150 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./css/hotel_desc.css" />
-    <link rel="stylesheet" href="./css/navbar.css" />
-    <link rel="stylesheet" href="./css/contact.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script src="./js/contact-form.js"></script>
-  </head>
 
-  <body>
-    <!-- -------------------------------------------------------- NAVIGATION ----------------------------------------------- -->
-    <nav class="navigation">
-      <ul>
-        HotelManager
-        <li><a class="" href="./">Home</a></li>
-        <li><a href="./login.html">Login</a></li>
-        <li><a href="./signup.html">Signup</a></li>
-        <li><a href="./hotels.html">Hotels</a></li>
-        <li><a onclick="openForm()">Contact</a></li>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./css/hotel_desc.css" />
+  <link rel="stylesheet" href="./css/navbar.css" />
+  <link rel="stylesheet" href="./css/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="./js/contact-form.js"></script>
+</head>
 
-        <div class="contact-section">
-          <p class="closer" onclick="closeForm()">close</p>
-          <h1 id="contact-header">get in touch!</h1>
-          <div class="contact-form">
-            <input
-              type="text"
-              class="contact-name contact-field"
-              placeholder="Name"
-            />
-            <input
-              type="text"
-              class="contact-email contact-field"
-              placeholder="E-Mail"
-            />
-            <input
-              type="text"
-              class="contact-msg contact-field"
-              placeholder="Leave a message"
-            />
-            <button onclick="alert('Contact query sent')">Contact Us</button>
-          </div>
-        </div>
-      </ul>
-    </nav>
-    <div class="container">
-      <div class="slideshow-container" style="margin-top: 20px">
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img
-            src="https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=600"
-            style="width: 100%"
-          />
-          <div class="text">Room1</div>
-        </div>
+<body>
+  <!-- -------------------------------------------------------- NAVIGATION ----------------------------------------------- -->
+  <nav class="navigation">
+    <ul>
+      HotelManager
+      <li><a href="./login.html" id="login-nav">Login</a></li>
+      <li><a href="./signup.html" id="signup-nav">Signup</a></li>
+      <li><a href="./index.html" id="logged-in" onclick="localStorage.clear()">Logout</a></li>
+      <li><a href="./hotels.html">Hotels</a></li>
+      <li><a onclick="openForm()">Contact</a></li>
 
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img
-            src="https://images.pexels.com/photos/460537/pexels-photo-460537.jpeg?auto=compress&cs=tinysrgb&w=600"
-            style="width: 100%"
-          />
-          <div class="text">Room2</div>
-        </div>
-
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img
-            src="https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&w=600"
-            style="width: 100%"
-          />
-          <div class="text">Room3</div>
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-
-        <div style="position: absolute; left: 200px">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
+      <div class="contact-section">
+        <p class="closer" onclick="closeForm()">close</p>
+        <h1 id="contact-header">get in touch!</h1>
+        <div class="contact-form">
+          <input type="text" class="contact-name contact-field" placeholder="Name" />
+          <input type="text" class="contact-email contact-field" placeholder="E-Mail" />
+          <input type="text" class="contact-msg contact-field" placeholder="Leave a message" />
+          <button onclick="alert('Contact query sent')">Contact Us</button>
         </div>
       </div>
-      <br />
-      <div id="info" style="margin-top: 20px">
-        <h1 class="info-header">Radisson Blu Property highlights</h1>
-
-        <p class="info-highlight">
-          Top location: Highly rated by recent guests (8.3)
-        </p>
-        <div>
-          <h4>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-          </h4>
-        </div>
-        <p>
-          <span class="info-highlight"> Breakfast info: </span>
-          <br />
-          Continental, Halal, Asian, American, Buffet
-        </p>
-        <p>
-          <span class="info-highlight"> Rooms with: </span>
-          <br />
-          City view<br />
-          Free parking available at the hotel
-        </p>
-        <p>
-          <span class="info-highlight"> Loyal customers </span>
-          <br />
-
-          There are more repeat guests here than most other properties.
-        </p>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="slideshow-container" style="margin-top: 20px">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=600"
+          style="width: 100%" />
+        <div class="text">Room1</div>
       </div>
-      <div class="book-button">
-        <button onclick="alert('Hotel Booked')">Book Now</button>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="https://images.pexels.com/photos/460537/pexels-photo-460537.jpeg?auto=compress&cs=tinysrgb&w=600"
+          style="width: 100%" />
+        <div class="text">Room2</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&w=600"
+          style="width: 100%" />
+        <div class="text">Room3</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div style="position: absolute; left: 200px">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
       </div>
     </div>
+    <br />
+    <div id="info" style="margin-top: 20px">
+      <h1 class="info-header">Radisson Blu Property highlights</h1>
 
-    <script>
-      let slideIndex = 1;
-      showSlides(slideIndex);
+      <p class="info-highlight">
+        Top location: Highly rated by recent guests (8.3)
+      </p>
+      <div>
+        <h4>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+        </h4>
+      </div>
+      <p>
+        <span class="info-highlight"> Breakfast info: </span>
+        <br />
+        Continental, Halal, Asian, American, Buffet
+      </p>
+      <p>
+        <span class="info-highlight"> Rooms with: </span>
+        <br />
+        City view<br />
+        Free parking available at the hotel
+      </p>
+      <p>
+        <span class="info-highlight"> Loyal customers </span>
+        <br />
 
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
+        There are more repeat guests here than most other properties.
+      </p>
+    </div>
+    <div class="book-button">
+      <button onclick="alert('Hotel Booked')">Book Now</button>
+    </div>
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName('mySlides');
+      let dots = document.getElementsByClassName('dot');
+      if (n > slides.length) {
+        slideIndex = 1;
       }
-
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
+      if (n < 1) {
+        slideIndex = slides.length;
       }
-
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName('mySlides');
-        let dots = document.getElementsByClassName('dot');
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = 'none';
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(' active', '');
-        }
-        slides[slideIndex - 1].style.display = 'block';
-        dots[slideIndex - 1].className += ' active';
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
       }
-    </script>
-  </body>
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(' active', '');
+      }
+      slides[slideIndex - 1].style.display = 'block';
+      dots[slideIndex - 1].className += ' active';
+    }
+  </script>
+
+  <script>
+    const token = localStorage.getItem("token");
+    if (token) {
+      document.getElementById('login-nav').style.display = 'none';
+      document.getElementById('signup-nav').style.display = 'none';
+      document.getElementById('logged-in').style.display = 'block';
+    }
+  </script>
+</body>
+
 </html>

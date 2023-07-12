@@ -1,105 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/navbar.css" />
-    <link rel="stylesheet" href="./css/signup.css" />
-    <link rel="stylesheet" href="./css/contact.css" />
-    <script src="./js/contact-form.js"></script>
-    <title>Signup</title>
-  </head>
 
-  <body>
-    <!-- -------------------------------------------------------- NAVIGATION ----------------------------------------------- -->
-    <nav class="navigation">
-      <ul>
-        HotelManager
-        <li><a class="active" href="./">Home</a></li>
-        <li><a href="./login.html">Login</a></li>
-        <li><a href="./signup.html">Signup</a></li>
-        <li><a href="./hotels.html">Hotels</a></li>
-        <li><a onclick="openForm()">Contact</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/navbar.css" />
+  <link rel="stylesheet" href="./css/signup.css" />
+  <link rel="stylesheet" href="./css/contact.css" />
+  <script src="./js/contact-form.js"></script>
+  <title>Signup</title>
+</head>
 
-        <div class="contact-section">
-          <p class="closer" onclick="closeForm()">close</p>
-          <h1 id="contact-header">get in touch!</h1>
-          <div class="contact-form">
-            <input
-              type="text"
-              class="contact-name contact-field"
-              placeholder="Name"
-            />
-            <input
-              type="text"
-              class="contact-email contact-field"
-              placeholder="E-Mail"
-            />
-            <input
-              type="text"
-              class="contact-msg contact-field"
-              placeholder="Leave a message"
-            />
-            <button onclick="alert('Contact query sent')">Contact Us</button>
-          </div>
-        </div>
-      </ul>
-    </nav>
+<body>
+  <!-- -------------------------------------------------------- NAVIGATION ----------------------------------------------- -->
+  <nav class="navigation">
+    <ul>
+      HotelManager
+      <li><a class="active" href="./">Home</a></li>
+      <li><a href="./hotels.html">Hotels</a></li>
+      <li><a onclick="openForm()">Contact</a></li>
 
-    <section id="login">
-      <div class="login-container">
-        <h1>Create an account</h1>
-        <!-- <form aciton ="hotels.html" name="myForm" onsubmit="return check()" method="post"> -->
-        <div id="name">
-          <input
-            type="text"
-            id="username"
-            class="inputs username"
-            placeholder="Username"
-          />
-          <div class="formerror"></div>
-        </div>
-        <div id="email1">
-          <input
-            type="email"
-            id="email"
-            class="inputs name"
-            placeholder="Email"
-          />
-          <div class="formerror"></div>
-        </div>
-        <div id="ph1">
-          <input
-            type="number"
-            id="ph"
-            class="inputs number"
-            placeholder="Phone Number (+91)"
-          />
-          <div class="formerror"></div>
-        </div>
-        <div id="password1">
-          <input
-            type="password"
-            id="password"
-            class="inputs password"
-            placeholder="Password"
-          /><br />
-          <div class="formerror"></div>
-        </div>
-        <input
-          type="submit"
-          class="btn-1"
-          value="Create account"
-          onclick="check()"
-        />
-        <!-- </form> -->
-        <div class="already">
-          Already have an account? <a href="./login.html">Login</a>
+      <div class="contact-section">
+        <p class="closer" onclick="closeForm()">close</p>
+        <h1 id="contact-header">get in touch!</h1>
+        <div class="contact-form">
+          <input type="text" class="contact-name contact-field" placeholder="Name" />
+          <input type="text" class="contact-email contact-field" placeholder="E-Mail" />
+          <input type="text" class="contact-msg contact-field" placeholder="Leave a message" />
+          <button onclick="alert('Contact query sent')">Contact Us</button>
         </div>
       </div>
-    </section>
+    </ul>
+  </nav>
 
-    <script src="./js/signup.js"></script>
-  </body>
+  <section id="login">
+    <div class="login-container">
+      <h1>Create an account</h1>
+      <!-- <form aciton ="hotels.html" name="myForm" onsubmit="return check()" method="post"> -->
+      <div id="name">
+        <input type="text" id="username" class="inputs username" placeholder="Username" />
+        <div class="formerror"></div>
+      </div>
+      <div id="email1">
+        <input type="email" id="email" class="inputs name" placeholder="Email" />
+        <div class="formerror"></div>
+      </div>
+      <div id="ph1">
+        <input type="number" id="ph" class="inputs number" placeholder="Phone Number (+91)" />
+        <div class="formerror"></div>
+      </div>
+      <div id="password1">
+        <input type="password" id="password" class="inputs password" placeholder="Password" /><br />
+        <div class="formerror"></div>
+      </div>
+      <input type="submit" class="btn-1" value="Create account" onclick="check()" />
+      <!-- </form> -->
+      <div class="already">
+        Already have an account? <a href="./login.html">Login</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="./js/signup.js"></script>
+</body>
+
 </html>

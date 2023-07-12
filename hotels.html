@@ -1,162 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/navbar.css" />
-    <link rel="stylesheet" href="./css/hotels.css" />
-    <link rel="stylesheet" href="./css/contact.css" />
-    <script src="./js/contact-form.js"></script>
-    <title>View hotels</title>
-  </head>
-  <body>
-    <!-- -------------------------------------------------------- NAVIGATION ----------------------------------------------- -->
-    <nav class="navigation">
-      <ul>
-        <span class="navbar-brand"> HotelManager </span>
-        <li><a class="active" href="./">Home</a></li>
-        <li><a href="./login.html">Login</a></li>
-        <li><a href="./signup.html">Signup</a></li>
-        <li><a onclick="openForm()">Contact</a></li>
 
-        <div class="contact-section">
-          <p class="closer" onclick="closeForm()">close</p>
-          <h1 id="contact-header">get in touch!</h1>
-          <div class="contact-form">
-            <input
-              type="text"
-              class="contact-name contact-field"
-              placeholder="Name"
-            />
-            <input
-              type="text"
-              class="contact-email contact-field"
-              placeholder="E-Mail"
-            />
-            <input
-              type="text"
-              class="contact-msg contact-field"
-              placeholder="Leave a message"
-            />
-            <button onclick="alert('Contact query sent')">Contact Us</button>
-          </div>
-        </div>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/navbar.css" />
+  <link rel="stylesheet" href="./css/hotels.css" />
+  <link rel="stylesheet" href="./css/contact.css" />
+  <script src="./js/contact-form.js"></script>
+  <title>View hotels</title>
+</head>
 
-    <section id="hotels">
-      <!--<h1 class="hotels-header">List Of Hotels</h1>-->
-      <!-- <div class="hotels-header">
-        <form autocomplete="off">
-          <div>
-            <input type="text" id="input" placeholder="Search hotel"/>
-          </div>
-          <ul class="list"></ul>
-        </form>
-      </div> -->
+<body>
+  <!-- -------------------------------------------------------- NAVIGATION ----------------------------------------------- -->
+  <nav class="navigation">
+    <ul>
+      HotelManager
+      <li><a href="./login.html" id="login-nav">Login</a></li>
+      <li><a href="./signup.html" id="signup-nav">Signup</a></li>
+      <li><a href="./index.html" id="logged-in" onclick="localStorage.clear()">Logout</a></li>
+      <li><a href="./hotels.html">Hotels</a></li>
+      <li><a onclick="openForm()">Contact</a></li>
 
-      <div class="hotels-container">
-        <div class="hotel">
-          <div class="hotel-name">
-            <img class="hotel-image" src="./assets/img/hotel1_image.jpeg" />
-            <br class="breakline" />
-            <span>Radisson Blu</span>
-          </div>
-
-          <div class="hotel-info">
-            <div class="info info1">
-              <div class="info-title">No. of rooms</div>
-              <div class="info-value">400</div>
-            </div>
-            <div class="info info2">
-              <div class="info-title">No. of available rooms</div>
-              <div class="info-value">50</div>
-            </div>
-            <div class="info info3">
-              <div class="info-title">Price per night</div>
-              <div class="info-value">1500Rs</div>
-            </div>
-            <div class="info info4">
-              <div class="info-title">Pets allowed</div>
-              <div class="info-value">Yes</div>
-            </div>
-          </div>
-
-          <div class="book-hotel">
-            <button class="book">
-              <a href="./hotel_desc.html">Book Now</a>
-            </button>
-          </div>
-        </div>
-        <div class="hotel">
-          <div class="hotel-name">
-            <img class="hotel-image" src="./assets/img/hotel2_image.jpeg" />
-            <br class="breakline" />
-            <span>Shangri La</span>
-          </div>
-
-          <div class="hotel-info">
-            <div class="info info1">
-              <div class="info-title">No. of rooms</div>
-              <div class="info-value">300</div>
-            </div>
-            <div class="info info2">
-              <div class="info-title">No. of available rooms</div>
-              <div class="info-value">100</div>
-            </div>
-            <div class="info info3">
-              <div class="info-title">Price per night</div>
-              <div class="info-value">2000Rs</div>
-            </div>
-            <div class="info info4">
-              <div class="info-title">Pets allowed</div>
-
-              <div class="info-value">No</div>
-            </div>
-          </div>
-
-          <div class="book-hotel">
-            <button class="book">
-              <a href="./hotel_desc.html">Book Now</a>
-            </button>
-          </div>
-        </div>
-        <div class="hotel">
-          <div class="hotel-name">
-            <img class="hotel-image" src="./assets/img/hotel3_image.jpeg" />
-            <br class="breakline" />
-            <span>Mariott</span>
-          </div>
-
-          <div class="hotel-info">
-            <div class="info info1">
-              <div class="info-title">No. of rooms</div>
-              <div class="info-value">200</div>
-            </div>
-            <div class="info info2">
-              <div class="info-title">No. of available rooms</div>
-
-              <div class="info-value">100</div>
-            </div>
-            <div class="info info3">
-              <div class="info-title">Price per night</div>
-              <div class="info-value">1600Rs</div>
-            </div>
-            <div class="info info4">
-              <div class="info-title">Pets allowed</div>
-              <div class="info-value">Yes</div>
-            </div>
-          </div>
-
-          <div class="book-hotel">
-            <button class="book">
-              <a href="./hotel_desc.html">Book Now</a>
-            </button>
-          </div>
+      <div class="contact-section">
+        <p class="closer" onclick="closeForm()">close</p>
+        <h1 id="contact-header">get in touch!</h1>
+        <div class="contact-form">
+          <input type="text" class="contact-name contact-field" placeholder="Name" />
+          <input type="text" class="contact-email contact-field" placeholder="E-Mail" />
+          <input type="text" class="contact-msg contact-field" placeholder="Leave a message" />
+          <button onclick="alert('Contact query sent')">Contact Us</button>
         </div>
       </div>
-    </section>
-    <!-- <script src="./js/search.js"></script> -->
-  </body>
+    </ul>
+  </nav>
+
+  <section id="hotels">
+
+    <div class="hotels-container">
+      <h1 id="welcome-header"></h1>
+      <div class="hotel">
+        <div class="hotel-name">
+          <img class="hotel-image" src="./assets/img/hotel1_image.jpeg" />
+          <br class="breakline" />
+          <span>Radisson Blu</span>
+        </div>
+
+        <div class="hotel-info">
+          <div class="info info1">
+            <div class="info-title">No. of rooms</div>
+            <div class="info-value">400</div>
+          </div>
+          <div class="info info2">
+            <div class="info-title">No. of available rooms</div>
+            <div class="info-value">50</div>
+          </div>
+          <div class="info info3">
+            <div class="info-title">Price per night</div>
+            <div class="info-value">1500Rs</div>
+          </div>
+          <div class="info info4">
+            <div class="info-title">Pets allowed</div>
+            <div class="info-value">Yes</div>
+          </div>
+        </div>
+
+        <div class="book-hotel">
+          <button class="book">
+            <a href="./hotel_desc.html">Book Now</a>
+          </button>
+        </div>
+      </div>
+      <div class="hotel">
+        <div class="hotel-name">
+          <img class="hotel-image" src="./assets/img/hotel2_image.jpeg" />
+          <br class="breakline" />
+          <span>Shangri La</span>
+        </div>
+
+        <div class="hotel-info">
+          <div class="info info1">
+            <div class="info-title">No. of rooms</div>
+            <div class="info-value">300</div>
+          </div>
+          <div class="info info2">
+            <div class="info-title">No. of available rooms</div>
+            <div class="info-value">100</div>
+          </div>
+          <div class="info info3">
+            <div class="info-title">Price per night</div>
+            <div class="info-value">2000Rs</div>
+          </div>
+          <div class="info info4">
+            <div class="info-title">Pets allowed</div>
+
+            <div class="info-value">No</div>
+          </div>
+        </div>
+
+        <div class="book-hotel">
+          <button class="book">
+            <a href="./hotel_desc.html">Book Now</a>
+          </button>
+        </div>
+      </div>
+      <div class="hotel">
+        <div class="hotel-name">
+          <img class="hotel-image" src="./assets/img/hotel3_image.jpeg" />
+          <br class="breakline" />
+          <span>Mariott</span>
+        </div>
+
+        <div class="hotel-info">
+          <div class="info info1">
+            <div class="info-title">No. of rooms</div>
+            <div class="info-value">200</div>
+          </div>
+          <div class="info info2">
+            <div class="info-title">No. of available rooms</div>
+
+            <div class="info-value">100</div>
+          </div>
+          <div class="info info3">
+            <div class="info-title">Price per night</div>
+            <div class="info-value">1600Rs</div>
+          </div>
+          <div class="info info4">
+            <div class="info-title">Pets allowed</div>
+            <div class="info-value">Yes</div>
+          </div>
+        </div>
+
+        <div class="book-hotel">
+          <button class="book">
+            <a href="./hotel_desc.html">Book Now</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <script src="./js/search.js"></script> -->
+</body>
+<script>
+  const token = localStorage.getItem("token");
+  const username = localStorage.getItem("username");
+  if (token) {
+    document.getElementById('login-nav').style.display = 'none';
+    document.getElementById('signup-nav').style.display = 'none';
+    document.getElementById('logged-in').style.display = 'block';
+
+    document.getElementById('welcome-header').innerHTML = 'Welcome, ' + username + '!';
+  }
+</script>
+
 </html>
