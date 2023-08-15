@@ -2,6 +2,7 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 
 const verifyToken = require('./middleware/Auth');
 
@@ -91,7 +92,6 @@ app.post('/signup', async (req, res) => {
 app.post('/login', async (req, res) => {
   try {
     const { username, password } = req.body;
-    console.log(req.body);
     const user = await Customer.findOne({username});
     if (!user) {
       throw new Error('Invalid username');
@@ -146,6 +146,8 @@ app.get('/getBookings', async (req, res) => {
   
   res.json(bookings);
 });
+
+app.use(express.static("public"));
 
 // Start the server
 const port = 3000;
