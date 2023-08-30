@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000/signup';
+const url = '/signup';
 
 async function submitSignupForm(password, username, phone, email) {
   const response = await fetch(url, {

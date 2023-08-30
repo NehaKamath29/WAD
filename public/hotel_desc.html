@@ -159,7 +159,7 @@
         document.getElementById('logged-in').style.display = 'block';
       }
 
-      const res = await fetch(url + 'hotel/' + hotelId);
+      const res = await fetch('/hotel/' + hotelId);
       const hotel = await res.json();
       console.log(hotel);
 
@@ -167,7 +167,7 @@
     })();
 
     async function bookHotel() {
-      const response = await fetch(url + 'createBooking', {
+      const response = await fetch('/createBooking', {
         method: 'POST',
         body: JSON.stringify({ hotelId }),
         headers: {

@@ -1,5 +1,5 @@
 
-const url = 'http://localhost:3000/login';
+const url = '/login';
 
 async function submitForm (username, password) {
   const response = await fetch(url, {

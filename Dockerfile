@@ -13,4 +13,4 @@ COPY . .
 # And because the app runs on port 3000
 EXPOSE 3000
 
-CMD ["npm", "run", "server"]
+CMD ["npm", "run", "prod"]
